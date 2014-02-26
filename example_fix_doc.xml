@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<message>
+    <header>
+        <field name="BeginString" tag="8"><![CDATA[FIX.4.4]]></field>
+        <field name="BodyLength" tag="9"><![CDATA[524]]></field>
+        <field name="MsgSeqNum" tag="34"><![CDATA[312]]></field>
+        <field enum="MarketDataSnapshotFullRefresh" name="MsgType" tag="35"><![CDATA[W]]></field>
+        <field name="SenderCompID" tag="49"><![CDATA[APAMA_ECOM_RATES]]></field>
+        <field name="SendingTime" tag="52"><![CDATA[20140130-11:52:45.516]]></field>
+        <field name="TargetCompID" tag="56"><![CDATA[CAPLIN_RC]]></field>
+    </header>
+    <body>
+        <field name="Symbol" tag="55"><![CDATA[AUD/USD]]></field>
+        <field name="MDReqID" tag="262"><![CDATA[AUD/USD/SPOT/TIER1/139108280527033]]></field>
+        <field name="NoMDEntries" tag="268"><![CDATA[6]]></field>
+        <field enum="OFFER" name="MDEntryType" tag="269"><![CDATA[1]]></field>
+        <field name="MDEntryPx" tag="270"><![CDATA[1.79681]]></field>
+        <field name="MDEntrySize" tag="271"><![CDATA[5000000]]></field>
+        <field name="QuoteEntryID" tag="299"><![CDATA[AUD/USD_TIER1_S_11:52:45.500_2]]></field>
+        <field name="TenorValue" tag="6215"><![CDATA[SP]]></field>
+    </body>
+    <trailer>
+        <field name="CheckSum" tag="10"><![CDATA[060]]></field>
+    </trailer>
+</message>
