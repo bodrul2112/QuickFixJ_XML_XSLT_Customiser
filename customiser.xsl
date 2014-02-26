@@ -3,6 +3,8 @@
     exclude-result-prefixes="xs"
     version="2.0">
     
+    <xsl:output method="xml" indent="yes" omit-xml-declaration="yes" />
+    
     <xsl:template match="/">
         <xsl:for-each select="*">
             <xsl:call-template name="printout">
@@ -21,7 +23,15 @@
                 <xsl:call-template name="printout">
                 </xsl:call-template>
             </xsl:if>
-                <xsl:value-of select="./@name"/>
+            
+            <xsl:variable name="nodeName" select="./@name"></xsl:variable>
+            
+            <xsl:if test="$nodeName != ''">
+                <xsl:text>[</xsl:text><xsl:value-of select="./@name"/><xsl:text>]</xsl:text>
+                <xsl:text>=</xsl:text>
+                <xsl:value-of select="text()"/>
+                <xsl:text>,</xsl:text>    
+            </xsl:if>
             
             <!--
                 Interesting but I don't really need this
